@@ -5,4 +5,6 @@ from django.views.decorators.csrf import csrf_exempt
 
 def keyboard(request):
     return JsonResponse({"type" : "buttons", "buttons" : ["선택 1", "선택 2", "선택 3"]})
+def message(request):
+    return
 # Create your views here.
