@@ -41,11 +41,11 @@ def message(request) :
                }
         })
 def weather(request):
-    params = {"version": "1", "city":"서울", "county":"광진구","village":"군자동"}
+    params = {"version": "1", "city":"서울", "county":"송파구","village":"장지동"}
     headers = {"appKey": "744b5b35-3085-4fa1-843f-7358c2089450"}
     response = requests.get("https://api2.sktelecom.com/weather/current/minutely", params=params, headers=headers)
     data = json.loads(response.text)
-    weather = data["weather"]["minutely"]
+    weather = data["weather"]["minutely"]   
     sky = weather[0]["sky"]["name"]
     wind = weather[0]["wind"]["wspd"]
     temp = weather[0]["temperature"]["tc"]
