@@ -18,5 +18,5 @@ from django.urls import path
 from home import views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('keyboard/',views.keyboard)
+    path('keyboard',views.keyboard)
 ]
